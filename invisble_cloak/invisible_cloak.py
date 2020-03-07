@@ -12,7 +12,7 @@ while cap.isOpened():
         frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
         
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-        l_red = np.array([0, 120, 70])
+        l_red = np.array([0, 120, 150])
         u_red = np.array([10, 255, 255])
         mask1 = cv2.inRange(hsv, l_red, u_red)
 
