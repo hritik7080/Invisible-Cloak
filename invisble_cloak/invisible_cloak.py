@@ -36,7 +36,8 @@ while cap.isOpened():
         invisible = cv2.addWeighted(part1, 1, part2, 1, 1)
         cv2.imshow("real", frame)
         cv2.imshow("magic", invisible)
-        cv2.waitKey(0)
+        if cv2.waitKey(25) & 0xFF == ord('q'):
+            break
     else:
         break
 cap.release()
